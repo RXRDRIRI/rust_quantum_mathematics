@@ -1,5 +1,5 @@
 [package]
-name = "quantum_mathematics"
+name = "rust_quantum_mathematics"
 version = "0.1.0"
 edition = "2021"
 
