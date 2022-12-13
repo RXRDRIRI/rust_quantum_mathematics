@@ -23,6 +23,29 @@ impl QInteger {
         }
         temp
     }
+    pub fn qbinomial(&self , j : usize) -> f32 {
+        let mut aiter = self.base ;
+        let mut biter = j ;
+        let mut citer = self.base - j ;
+        let mut temp = 1.0 ;
+        let mut atemp = 1.0 ;
+        let mut btemp = 1.0 ;
+        let mut ctemp = 1.0 ;
+        while aiter > 0 {
+            atemp = atemp * ((pow(self.q ,aiter)-1.0)/(self.q - 1.0)) ;
+            aiter = aiter - 1 ;
+        }
+        while biter > 0 {
+            btemp = btemp * ((pow(self.q ,biter)-1.0)/(self.q - 1.0)) ;
+            biter = biter - 1 ;
+        }
+        while citer > 0 {
+            ctemp = ctemp * ((pow(self.q ,citer)-1.0)/(self.q - 1.0)) ;
+            citer = citer - 1 ;
+        }
+        temp = (atemp / btemp) / ctemp ;
+        temp 
+    }
 }
 
 #[cfg(test)]
