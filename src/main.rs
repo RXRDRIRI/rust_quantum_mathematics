@@ -13,6 +13,10 @@ fn main() {
     // step 3 : calculate the q number 
     casa.integer_count();
     println!("The q integer is {}" , casa.number);
+    //step 4 : calcultae the q factorial
+    println!("the q factorial is {}" , casa.qfactorial());
+    let j = 3 ;
+    println!("the q binomial is {}" , casa.qbinomial(j));
 
 }
 
